@@ -9,7 +9,7 @@
       </div>
       <div class="row">
         <div class="col-sm">
-          <div class="card" style="width: 18rem;">
+          <div class="card mb-3" style="width: 19rem;">
             <div class="card-header bg-light">
               <h3 class="card-title text-center text-dark">
                 <i class="fas fa-laptop-code" />
@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="col-sm">
-          <div class="card" style="width: 18rem;">
+          <div class="card mb-3" style="width: 19rem;">
             <div class="card-header bg-light">
               <h3 class="card-title text-center text-dark">
                 <i class="fas fa-server" />
@@ -67,7 +67,7 @@
           </div>
         </div>
         <div class="col-sm">
-          <div class="card" style="width: 18rem;">
+          <div class="card mb-3" style="width: 19rem;">
             <div class="card-header bg-light">
               <h3 class="card-title text-center text-dark">
                 <i class="fas fa-tools" />
@@ -188,6 +188,13 @@ export default {
           tool: 'GIT',
           icon: 'fab fa-git-alt',
           level: 80,
+          category: 'others'
+        },
+        {
+          id: 13,
+          tool: 'Linux/Ubuntu',
+          icon: 'fab fa-ubuntu',
+          level: 60,
           category: 'others'
         }
       ]
