@@ -196,6 +196,13 @@ export default {
           icon: 'fab fa-ubuntu',
           level: 60,
           category: 'others'
+        },
+        {
+          id: 14,
+          tool: 'Postman',
+          icon: 'fa-postman',
+          level: 70,
+          category: 'others'
         }
       ]
     }
@@ -212,5 +219,10 @@ export default {
 <style scoped>
 a {
   text-decoration: none;
+}
+
+.fa-postman::before {
+  content: url('https://api.iconify.design/logos-postman.svg?height=16');
+  vertical-align: -0.125em;
 }
 </style>
