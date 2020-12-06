@@ -71,7 +71,7 @@
             <div class="card-header bg-light">
               <h3 class="card-title text-center text-dark">
                 <i class="fas fa-tools" />
-                Backend
+                Others
               </h3>
             </div>
             <div class="card-footer p-0">
@@ -203,6 +203,13 @@ export default {
           icon: 'fa-postman',
           level: 70,
           category: 'others'
+        },
+        {
+          id: 15,
+          tool: 'jQuery',
+          icon: 'fa-jquery text-default',
+          level: 65,
+          category: 'frontend'
         }
       ]
     }
@@ -223,6 +230,11 @@ a {
 
 .fa-postman::before {
   content: url('https://api.iconify.design/logos-postman.svg?height=16');
+  vertical-align: -0.125em;
+}
+
+.fa-jquery::before {
+  content: url('https://api.iconify.design/cib:jquery.svg?color=%23bd5d38&height=16');
   vertical-align: -0.125em;
 }
 </style>
