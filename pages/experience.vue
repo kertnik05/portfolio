@@ -36,7 +36,7 @@ export default {
       experiences: [
         {
           id: 1,
-          position: 'Intern',
+          position: 'Student Intern',
           company: 'Salusciens, Inc.',
           tasks: [
             {
