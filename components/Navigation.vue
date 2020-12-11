@@ -5,7 +5,7 @@
         Kert Rey Nikko Lumahang
       </span>
       <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="~/assets/img/profile.jpg" alt="profile">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="~/assets/img/profile2.jpeg" alt="profile">
       </span>
     </nuxt-link>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
@@ -13,34 +13,9 @@
     </button>
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <nuxt-link class="nav-link" to="/about">
-            About
-          </nuxt-link>
-        </li>
-        <li class="nav-item">
-          <nuxt-link class="nav-link" to="/experience">
-            Experience
-          </nuxt-link>
-        </li>
-        <li class="nav-item">
-          <nuxt-link class="nav-link" to="/education">
-            Education
-          </nuxt-link>
-        </li>
-        <li class="nav-item">
-          <nuxt-link class="nav-link" to="/skills">
-            Skills
-          </nuxt-link>
-        </li>
-        <li class="nav-item">
-          <nuxt-link class="nav-link" to="/interests">
-            Interests
-          </nuxt-link>
-        </li>
-        <li class="nav-item">
-          <nuxt-link class="nav-link" to="/projects">
-            Projects
+        <li v-for="route in routes" :key="route.id" class="nav-item">
+          <nuxt-link class="nav-link" :to="route.link">
+            {{ route.name }}
           </nuxt-link>
         </li>
       </ul>
@@ -50,6 +25,41 @@
 
 <script>
 export default {
-
+  data () {
+    return {
+      routes: [
+        {
+          id: 1,
+          name: 'About',
+          link: '/about'
+        },
+        {
+          id: 2,
+          name: 'Experience',
+          link: '/experience'
+        },
+        {
+          id: 3,
+          name: 'Education',
+          link: '/education'
+        },
+        {
+          id: 4,
+          name: 'Skills',
+          link: '/skills'
+        },
+        {
+          id: 4,
+          name: 'Interests',
+          link: '/interests'
+        },
+        {
+          id: 5,
+          name: 'Projects',
+          link: '/projects'
+        }
+      ]
+    }
+  }
 }
 </script>
