@@ -7,14 +7,18 @@
       <div v-for="edu in educations" :key="edu.id" class="d-flex flex-column flex-md-row justify-content-between mb-5">
         <div class="flex-grow-1">
           <h3 class="mb-0">
-            {{ edu.school }}
+            {{ edu.degree }}
           </h3>
           <div class="subheading mb-3">
-            {{ edu.degree }}
+            <a :href="edu.school.website" :target="edu.school.website == '#' ? '_self' : '_blank'">
+              {{ edu.school.name }}
+            </a>
           </div>
-          <div>
-            {{ edu.course }} - {{ edu.major }}
-          </div>
+          <ul>
+            <li v-for="affiliation in edu.affliations" :key="affiliation.id">
+              {{ affiliation.title }}
+            </li>
+          </ul>
         </div>
         <div class="flex-shrink-0">
           <span class="text-primary">
@@ -34,18 +38,52 @@ export default {
       educations: [
         {
           id: 1,
-          school: 'Mindanao State University at Naawan',
-          degree: 'Bachelor of Science',
-          course: 'Information Technology',
-          major: 'Database Management System',
+          school: {
+            name: 'Mindanao State University at Naawan',
+            website: 'https://msunaawan.edu.ph'
+          },
+          degree: 'Bachelor of Science in Information Technology',
+          affliations: [
+            {
+              id: 1,
+              title: 'Majored in Database Management System'
+            },
+            {
+              id: 2,
+              title: 'Capstone Project: Student Information Management System for Lake View Academy in Don Carlos, Bukidnon'
+            },
+            {
+              id: 3,
+              title: 'Awarded Performing Arts in Music'
+            },
+            {
+              id: 4,
+              title: 'Member of Koro Kaayad Kaligaon Choir in Mindanao State University at Naawan'
+            }
+          ],
           duration: 'January 2016 - July 2020'
         },
         {
           id: 2,
-          school: 'Matangad National High School',
+          school: {
+            name: 'Matangad National High School',
+            website: '#'
+          },
           degree: 'High School Diploma',
-          course: '',
-          major: '',
+          affliations: [
+            {
+              id: 1,
+              title: 'Graduated in Top 8 of Class'
+            },
+            {
+              id: 2,
+              title: 'Elected to Senator for Supreme Student Government in 2009'
+            },
+            {
+              id: 3,
+              title: 'Member of Supreme Student Government'
+            }
+          ],
           duration: 'January 2016 - July 2020'
         }
       ]
